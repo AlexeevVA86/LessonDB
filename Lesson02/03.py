@@ -5,7 +5,7 @@ for i in range(len(weather)):
     circumcision = weather.pop(0)
     if  circumcision.isdigit():
         weather.append(F'"{int(circumcision):02d}"')
-    elif circumcision[0] == "-":
+    elif circumcision[0] == "-" and circumcision[1].isdigit():
         weather.append(F'"{int(circumcision):03d}"')
     elif circumcision[0] == "+" and circumcision[1].isdigit():
         weather.append(F'"+{int(circumcision):02d}"')
