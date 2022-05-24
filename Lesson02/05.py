@@ -17,7 +17,7 @@ for i, boom in enumerate(price):
     print(f"«{rubles[0]} руб {penny[1]} коп", end='», ')
 print("")
 
-print(f"id перед сортировкой {id(price)}")
+print(f"id до сортировки {id(price)}")
 price.sort()
 print(price)
 print(f"id после сортировки {id(price)}")
