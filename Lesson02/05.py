@@ -1,5 +1,4 @@
 # 5. Создать вручную список, содержащий цены на товары (10–20 товаров), например:
-# © geekbrains.ru 19
 # [57.8, 46.51, 97, ...]
 # A. Вывести на экран эти цены через запятую в одну строку, цена должна отображаться в виде
 # <r> руб <kk> коп (например «5 руб 04 коп»). Подумать, как из цены получить рубли и копейки,
@@ -11,18 +10,19 @@
 # D. Вывести цены пяти самых дорогих товаров. Сможете ли вывести цены этих товаров по
 # возрастанию, написав минимум кода?
 
-price =[57.8, 46.51, 97, 10.1, 12, 7.7, 8.90, 51.2, 13.33, 20, 2]
-vowels_str = ",".join(str(price))
-print(vowels_str)
+price = [57.8, 46.51, 97, 10.1, 12, 7.7, 8.90, 51.2, 13.33, 20, 2]
+for i, boom in enumerate(price):
+    penny = str(f"{float(boom):.2f}").split(".")
+    rubles = str(f"{int(boom):02d}").split(".")
+    print(f"«{rubles[0]} руб {penny[1]} коп", end='», ')
+print("")
 
+print(f"id перед сортировкой {id(price)}")
+price.sort()
+print(price)
+print(f"id после сортировки {id(price)}")
 
-# for i in range(len(price)):
-#     circumcision = price.pop(0)
-#
-# # print(",".join(circumcision))
+copy_price = price.copy()
+copy_price.sort(reverse=True)
+print(copy_price)
 
-
-
-
-
-# weather2.append(F'"+{int(circumcision):02d}"')
