@@ -26,3 +26,5 @@ copy_price = price.copy()
 copy_price.sort(reverse=True)
 print(copy_price)
 
+print(copy_price[:5])
+
