@@ -9,4 +9,4 @@ def num_translate(a):
     return magick
 
 
-print(num_translate('zero'))
+print(num_translate('four'))
