@@ -6,13 +6,13 @@ numbers = {'zero': 'ноль', 'one': 'один', 'three': 'три', 'four': 'ч
            'seven': 'семь', 'eight': 'восемь', 'nine': 'девять', 'ten': 'десять'}
 
 
-def num_translate_adv(a):
-    if a.islower() == True:
-        magick = numbers.get(a)
+def num_translate_adv(arg):
+    if arg.islower() == True:
+        magick = numbers.get(arg)
         return magick
     else:
-        magick = numbers.get(a.lower())
+        magick = numbers.get(arg.lower())
         return f"{magick.capitalize()}"
 
 
-print(num_translate_adv('one'))
+print(num_translate_adv('One'))
