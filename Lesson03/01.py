@@ -1,6 +1,7 @@
 # 1. Написать функцию num_translate(), переводящую числительные от 0 до 10 c английского на русский язык.
 
-numbers = {0: 'zero', 1: 'one', 3: 'tre', 4: 'four', 5: 'five', 6: 'secs', 7: 'seven', 8: 'eith', 9: 'night', 10: 'ten'}
+numbers = {'zero': 'ноль', 'one': 'один', 'three': 'три', 'four': 'четыре', 'five': 'пять', 'six': 'шесть',
+           'seven': 'семь', 'eight': 'восемь', 'nine': 'девять', 'ten': 'десять'}
 
 
 def num_translate(a):
@@ -8,4 +9,4 @@ def num_translate(a):
     return magick
 
 
-print(num_translate(11))
+print(num_translate('zero'))
