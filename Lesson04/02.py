@@ -14,9 +14,13 @@ import requests
 import json
 import pprint
 
-URL = "http://www.cbr.ru/scripts/XML_daily.asp"
+URL = "https://www.cbr-xml-daily.ru/daily_json.js"
 
 req = requests.get(URL)
+
+dict_json = json.loads(req.text)
+
+pprint.pprint(dict_json)
 
 def currency_rates():
     print()
@@ -24,4 +28,4 @@ def currency_rates():
 
 currency_rates()
 
-print(req)
+#pprint.pprint(req.text)
