@@ -9,8 +9,19 @@
 # Если в качестве аргумента передали код валюты, которого нет в ответе, вернуть None. 
 # Можно ли сделать работу функции не зависящей от того, в каком регистре был передан аргумент? 
 # В качестве примера выведите курсы доллара и евро.
+# https://www.cbr-xml-daily.ru/
+import requests
+import json
+import pprint
+
+URL = "http://www.cbr.ru/scripts/XML_daily.asp"
+
+req = requests.get(URL)
 
 def currency_rates():
     print()
     return 0
 
+currency_rates()
+
+print(req)
