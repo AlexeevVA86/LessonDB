@@ -9,4 +9,4 @@ def num_translate(a):
     return magick
 
 
-print(num_translate('four'))
+print(num_translate('gdfdfg'))
