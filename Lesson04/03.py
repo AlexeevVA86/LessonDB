@@ -27,23 +27,12 @@ def currency_rates(currency):
 currency_rates("usd")
 
 
-
-
 # date_get = dict_cbr['Date']
 # name_valute = dict_cbr['Valute']['USD']['Name']
 
 # print(f"Курс {name_valute} на {date_get} составляет {exchange_rates} руб. ")
 
-
-
-
-
-
-
-
 #     print()
 #     return 0
-
-
 
 # #pprint.pprint(req.text)
