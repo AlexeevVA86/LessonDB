@@ -2,7 +2,6 @@
 # которая передаётся в ответе сервера. Дата должна быть в виде объекта date. 
 # Подумайте, как извлечь дату из ответа, 
 # какой тип данных лучше использовать в ответе функции?
-from datetime import datetime
 import requests
 import json
 import datetime as dt
