@@ -10,6 +10,9 @@
 # Проверить его работу вплоть до истощения.
 # Подумать, в каких ситуациях генератор даст эффект.
 
+from itertools import zip_longest
+
+
 tutors = [
     'Иван', 'Анастасия', 'Петр', 'Сергей',
     'Дмитрий', 'Борис', 'Елена'
@@ -18,8 +21,8 @@ klasses = [
     '9А', '7В', '9Б', '9В', '8Б', '10А', '10Б', '9А'
 ]
 
-print(len(tutors))
-print(len(klasses))
+generations = ((tutors, klasses) for tutors, klasses in zip_longest(tutors, klasses) if klasses is not None)
 
 
-(num for num in range(len(tutors)) if num % 2 == 1)
+print(*generations)
+print(generations)
