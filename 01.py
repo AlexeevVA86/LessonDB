@@ -1,23 +1,14 @@
-# 1. Написать скрипт, создающий стартер (заготовку) для проекта со следующей структурой папок:
-# |--my_project
-#    |--settings
-#    |--mainapp
-#    |--adminapp
-#    |--authapp
-# Примечание: подумайте о ситуации, когда некоторые папки уже есть на диске
-# (как быть?); как лучше хранить конфигурацию этого стартера, чтобы в
-# будущем можно было менять имена папок под конкретный проект;
-# можно ли будет при этом расширять конфигурацию и хранить данные
-# о вложенных папках и файлах (добавлять детали)?
+import re
+from functools import wraps
 
 
-import os
+def email_parse(email_address: str):
+    email_parser = re.compile('^(.+)@(.+\.[a-z]{2,})')
+    if not email_parser.match(email_address):
+        raise ValueError
 
-vood = {'my_project': ['settings', 'mainapp', 'adminapp', 'authapp']}
-for i, folders in vood.items():
-    if os.path.exists(i):
-        None
-    else:
-        for folder in folders:
-            cur_dir = os.path.join(i, folder)
-            os.makedirs(cur_dir)
+    passed_email = email_parser.findall(email_address)
+    return {'username': passed_email[0][0], 'domain': passed_email[0][1]}
+
+
+print(email_parse('someone@geekbrains.ru'))
